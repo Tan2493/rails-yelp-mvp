@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   get "restaurants", to: "restaurants#index"
   get "restaurants/new", to: "restaurants#new"
   post "restaurants", to: "restaurants#create"
-  get "restaurants/:id", to: "restaurants#show"
+  get "restaurants/:id", to: "restaurants#show", as: :restaurant
+  get "restaurants/38", to: "restaurants#index"
+  get "restaurants/38/reviews/new", to: "reviews#new"
 end
